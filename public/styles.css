@@ -1,0 +1,866 @@
+/* Общие стили */
+body {
+    font-family: "Playfair Display", serif;
+    color: #eaeaea;
+    background-color: #23252A;
+    margin: 0;
+    padding-right: 0;
+    overflow: overlay;
+  }
+
+  h1, h2, h3 {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.6;
+    color: #b5b5b5;
+    margin: 10px 0;
+  }
+  
+  ul {
+    color: #FFFFFF;
+    list-style: none;
+    padding: 0;
+    margin: 0 0;
+  }
+  
+  ul li {
+    list-style-position: inside;
+    list-style-type:disc;
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  /* Стили для прокрутки */
+::-webkit-scrollbar {
+  width: 6px; /* Толщина скроллбара */
+  height: 6px; /* Высота горизонтального скроллбара */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.3); /* Полупрозрачный серый цвет */
+  border-radius: 3px; /* Закругление краёв */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 128, 128, 0.1); /* Более яркий цвет при наведении */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Прозрачный трек */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Прозрачный угол для пересечения вертикального и горизонтального скроллбаров */
+}
+
+  
+  
+  /* Навбар */
+  /* Базовые стили остаются */
+
+/* Базовые стили остаются */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1E1E1ECC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 1000;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-right: 5%;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #FAE5C4;
+  border-radius: 3px;
+  transition: 0.3s;
+  padding-right: 50px;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: #1e1e1eec;
+  padding: 20px 0;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.mobile-menu a {
+  font-family: "Playfair Display", serif;
+  color: #FAE5C4;
+  font-size: 32px;
+  padding: 25% 0;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+  
+  nav .logo img {
+    margin-right: 5%;
+    width: 53px;
+    height: 58;
+  }
+
+  nav .name {
+    font-family: "Playfair Display", serif;
+    color: #FAE5C4;
+    justify-content: flex-end;
+    margin-right: auto;
+  }
+  
+  nav .nav-links a {
+    font-family: "Playfair Display", serif;
+    color: #FAE5C4;
+    text-decoration: none;
+    margin: 0 10px;
+    order: 2;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  nav .nav-links a:hover {
+    color: #ffffff;
+  }
+  
+  nav .contacts {
+    
+    color: #FAE5C4;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 2%;
+  }
+  
+  nav .contacts i {
+    font-size: 20px;
+    color: #FAE5C4;
+    transition: color 0.3s;
+  }
+
+  nav .contacts i.fa-solid.fa-phone{
+    font-size: 12px;
+  }
+  
+  nav .contacts i:hover {
+    color: #ffffff;
+  }
+  
+  nav .contacts span {
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+    color: #FAE5C4;
+    font-weight: bold;
+    margin-right: 0%;
+  }
+
+  
+  /* Хедер */
+  header {
+    height: 100vh;
+    background: url('./images/background.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  header h1 {
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  header p {
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+    font-family: "Montserrat", serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+  }
+
+  header .btns {
+    margin-top: 5%;
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+  
+  header .button {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    background: #23252A;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  header .button2 {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: 1px solid #FFFFFF;
+  }
+  
+  header .button:hover {
+    background: #2b2d33;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .about2 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .about2 ul li{
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .about2 h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+  }
+  
+  /* Разделы */
+  section {
+    padding: 80px 40px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  section p {
+    margin-top: 5%;
+    font-family: "Montserrat", serif;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+
+  .mission h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+    font-size: 40px;
+  }
+
+  .mission p {
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .services h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+    font-size: 40px;
+  }
+
+  .services p {
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+  
+  /* Полоски */
+  section:before {
+    content: '';
+    display: grid;
+    position: relative;
+    margin-right: 20%;
+    height: 1px;
+    background: #E4AA4F;
+    width: 100%;
+  }
+  
+  /* Карточки */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 40px;
+  }
+  
+  .card {
+    font-family: "Montserrat", serif;
+    background: #ffffff;
+    border: 1px solid #3d3d3d;
+    margin-right: 8%;
+    margin-bottom: 5%;
+    color: #1E1E1E;
+    width: 328px;
+    text-align: left;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 328px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card1_img {
+    background: url(./images/card1.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card2_img {
+    background: url(./images/card2.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card3_img {
+    background: url(./images/card3.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card4_img {
+    background: url(./images/card4.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card5_img {
+    background: url(./images/card5.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card6_img {
+    background: url(./images/card6.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card7_img {
+    background: url(./images/card7.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card8_img {
+    background: url(./images/card8.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card9_img {
+    background: url(./images/card9.png) center/cover no-repeat;
+    width: 100%;
+    height: 328px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 5%;
+  }
+
+  .card_header {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+
+    /* margin-bottom: 10px; */
+    size: 50px;
+    background-color: #5A5540;
+    border: 10px solid #5A5540;
+  }
+  
+  .card h3 {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+    height: 5%;
+    /* margin-bottom: 10px; */
+    margin: 0;
+    background-color: #5A5540;
+  }
+
+  .card ul li {
+    font-family: "Montserrat", serif;
+    color: #1E1E1E;
+    padding: 2%;
+    list-style-position: inside;
+    list-style-type: circle;
+    font-size: 15px;
+    margin-right: 5%;
+  }
+  
+  /* Форма */
+  form {
+    padding-top: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_h1 {
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_h2 {
+    font-size: 40px;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_p {
+    font-family: "Montserrat", serif;
+    font-size: 10px;
+    text-align: center;
+    width: 110%;
+    padding: 0;
+    margin-bottom: 5%;
+  }
+
+  form .name {
+    font-family: "Montserrat", serif;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+  }
+
+  form .number {
+    font-family: "Montserrat", serif;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+  }
+
+  form .message {
+    font-family: "Montserrat", serif;
+    width: 110%;
+    height: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+    resize: none;
+  }
+
+  form .button {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    background: #23252A;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  form .button:hover {
+    background: #2b2d33;
+  }
+
+
+  .footer-contact {
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./images/background2.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #FFFFFF;
+  }
+
+  .social {
+    font-family: "Montserrat", serif;
+    font-size: 24px;
+    display: flex;
+    color: #FAE5C4;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .social i {
+    color: #FAE5C4;
+  }
+  
+  /* Подвал */
+  footer {
+    background: #1c1c1c;
+    padding: 20px;
+    text-align: center;
+    color: #b5b5b5;
+    font-size: 14px;
+  }
+
+
+  /* Адаптация */
+@media screen and (max-width: 768px) {
+
+  section h2 {
+    font-size: 26px;
+  }
+
+  ul li {
+    list-style-position: inside;
+    list-style-type:disc;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 15px;
+  }
+
+  .about2 ul li{
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .about2 h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .services h2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 0%;
+    font-size: 20px;
+  }
+
+  .services p {
+    font-size: 15px;
+    font-family: "Montserrat", serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 10%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1E1E1ECC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1000;
+    border-bottom: 1px solid #3d3d3d;
+  }
+
+  header h1 {
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  header p {
+    display: flex;
+    text-align: center;
+    align-items: flex-start;
+    margin-left: 0%;
+    font-family: "Montserrat", serif;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    margin-left: 10%;
+  }
+
+  header .btns {
+    margin-top: 5%;
+    display: flex;
+    text-align: start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  
+  header .button {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    background: #23252A;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    text-decoration: none;
+    transition: background 0.3s;
+    margin-bottom: 5%;
+    font-size: 15px;
+  }
+
+  header .button2 {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: 1px solid #FFFFFF;
+    font-size: 12px;
+  }
+  
+  header .button:hover {
+    background: #2b2d33;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  nav .logo img {
+    margin-right: 5px;
+    width: 53px;
+    height: 58;
+  }
+
+  nav .name {
+    font-family: "Playfair Display", serif;
+    color: #FAE5C4;
+    justify-content: flex-end;
+    margin-right: auto;
+  }
+
+  nav .contacts span {
+    display: none;
+  }
+
+  nav .contacts i.fa-solid.fa-phone{
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .burger span {
+    padding-right: 20%;
+    display: flex;
+    width: 20px;
+    height: 3px;
+    background: #FAE5C4;
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+  form {
+    padding-top: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_h1 {
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_h2 {
+    font-size: 28px;
+    text-align: start;
+    align-items: flex-start;
+    margin-left: 20%;
+  }
+
+  .form_p {
+    font-family: "Montserrat", serif;
+    font-size: 10px;
+    text-align: center;
+    width: 80%;
+    padding: 0;
+    margin-bottom: 5%;
+  }
+
+  form .name {
+    font-family: "Montserrat", serif;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+  }
+
+  form .number {
+    font-family: "Montserrat", serif;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+  }
+
+  form .message {
+    font-family: "Montserrat", serif;
+    width: 80%;
+    height: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1c1c1c;
+    resize: none;
+  }
+
+  form .button {
+    font-family: "Montserrat", serif;
+    display: inline-block;
+    background: #23252A;
+    color: #FFFFFF;
+    padding: 12px 25px;
+    border-radius: 37px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  form .button:hover {
+    background: #2b2d33;
+  }
+}
+  
+
